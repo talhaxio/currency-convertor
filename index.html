@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FX — Currency Converter</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Mono&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+<nav>
+  <a href="index.html">Convert</a>
+  <a href="about.html">About</a>
+</nav>
+
+<div class="card">
+
+  <div class="header">
+    <p class="header-eyebrow">Foreign Exchange</p>
+    <h1>Currency <em>Converter</em></h1>
+  </div>
+
+  <!-- Amount -->
+  <label>Amount</label>
+  <input type="number" id="amount" value="1" step="0.01">
+
+  <!-- Dropdowns -->
+  <div class="selectors">
+    <select id="fromCurrency"></select>
+    <div class="exchange-symbol">↔</div>
+    <select id="toCurrency"></select>
+  </div>
+
+  <!-- Button -->
+  <button id="convert-btn" onclick="convert()">Convert</button>
+
+  <!-- Result -->
+  <div id="result"></div>
+  <div class="time-block">
+    <p class="time-label">Current Time (IST)</p>
+    <p id="current-time">--:--:--</p>
+  </div>
+
+</div>
+
+<div id="popup-overlay" class="hidden">
+  <div class="popup">
+    <h2 id="popup-title">Notice</h2>
+    <p id="popup-message"></p>
+    <button id="popup-close">OK</button>
+  </div>
+</div>
+
+<!-- JS -->
+<script src="index.js"></script>
+</body>
+</html>
